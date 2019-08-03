@@ -93,7 +93,7 @@ if QUAT_UPDATE_MUL_10MS!=3, then SEND_N_QUATERNIONS must be ==1
    * it will introduce a delay of 10Seconds before starting the application
    * for having time to open the Terminal
    * for looking the ALLMEMS1 Initialization phase */
-  //#define ALLMEMS1_ENABLE_PRINTF
+  #define ALLMEMS1_ENABLE_PRINTF
 #else /* STM32_SENSORTILE */
   /* For Nucleo it's enable by default */
   #define ALLMEMS1_ENABLE_PRINTF

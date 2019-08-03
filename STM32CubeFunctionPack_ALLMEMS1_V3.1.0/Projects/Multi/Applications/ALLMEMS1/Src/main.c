@@ -938,6 +938,39 @@ static void SendMotionData(void)
   /* Read the Gyro values */
   BSP_GYRO_Get_Axes(TargetBoardFeatures.HandleGyroSensor,&GYR_Value);
   
+#ifdef ALLMEMS1_DEBUG_NOTIFY_TRAMISSION
+  int16_t acc_x_to_send, acc_y_to_send, acc_z_to_send;
+  int16_t gyr_x_to_send = 0,  gyr_y_to_send = 0,  gyr_z_to_send = 0;
+  int16_t mag_x_to_send, mag_y_to_send, mag_z_to_send;
+
+  acc_x_to_send = ACC_Value.AXIS_X;
+  acc_y_to_send = ACC_Value.AXIS_Y;
+  acc_z_to_send = ACC_Value.AXIS_Z;
+  ALLMEMS1_PRINTF("ACC_X=%d", acc_x_to_send);
+  ALLMEMS1_PRINTF("ACC_Y=%d", acc_y_to_send);
+  ALLMEMS1_PRINTF("ACC_Z=%d", acc_z_to_send);
+
+  gyr_x_to_send  = GYR_Value.AXIS_X / 100;
+  gyr_y_to_send  = GYR_Value.AXIS_Y / 100;
+  gyr_z_to_send  = GYR_Value.AXIS_Z / 100;
+  ALLMEMS1_PRINTF("GYR_X=%d", gyr_x_to_send);
+  ALLMEMS1_PRINTF("GYR_Y=%d", gyr_y_to_send);
+  ALLMEMS1_PRINTF("GYR_Z=%d", gyr_z_to_send);
+
+  mag_x_to_send = MAG_Value.AXIS_X;
+  mag_y_to_send = MAG_Value.AXIS_Y;
+  mag_z_to_send = MAG_Value.AXIS_Z;
+  ALLMEMS1_PRINTF("MAG_X=%d", mag_x_to_send);
+  ALLMEMS1_PRINTF("MAG_Y=%d", mag_y_to_send);
+  ALLMEMS1_PRINTF("MAG_Z=%d", mag_z_to_send);
+
+  ALLMEMS1_PRINTF("\r\n");
+#endif
+
+
+
+
+
   AccGyroMag_Update(&ACC_Value,&GYR_Value,&MAG_Value);
 }
 

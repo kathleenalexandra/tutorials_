@@ -1,4 +1,4 @@
-13:41:48 **** Build of configuration Debug for project STM32L4xx-SensorTile ****
+13:56:58 **** Build of configuration Debug for project STM32L4xx-SensorTile ****
 make all 
 Building file: /Users/alexandra/Desktop/myworkspace/STM32CubeFunctionPack_ALLMEMS1_V3.1.0/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
 Invoking: MCU GCC Compiler
@@ -532,6 +532,3 @@ Finished building target: ALLMEMS1_ST.elf
 Generating binary:
 arm-none-eabi-objcopy -O binary "ALLMEMS1_ST.elf" "ALLMEMS1_ST.bin"
  
-13:42:37 **** Incremental Build of configuration Debug for project STM32L4xx-SensorTile ****
-make all 
-make: Nothing to be done for `all'.

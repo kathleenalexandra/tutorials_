@@ -1,4 +1,4 @@
-!SESSION 2019-08-03 13:39:52.602 -----------------------------------------------
+!SESSION 2019-08-03 13:52:55.366 -----------------------------------------------
 eclipse.buildId=4.6.3.M20170301-0400
 java.version=1.8.0_131
 java.vendor=Oracle Corporation
@@ -6,19 +6,16 @@ BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
 Framework arguments:  -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/alexandra/.eclipse_keyring
 Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/alexandra/.eclipse_keyring
 
-!ENTRY org.eclipse.core.net 1 0 2019-08-03 13:39:54.577
+!ENTRY org.eclipse.core.net 1 0 2019-08-03 13:52:57.255
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
 
-!ENTRY org.eclipse.equinox.registry 4 1 2019-08-03 13:39:57.975
+!ENTRY org.eclipse.equinox.registry 4 1 2019-08-03 13:53:00.418
 !MESSAGE Executable extension definition for "resolver" not found.
 
-!ENTRY org.eclipse.equinox.registry 4 1 2019-08-03 13:39:57.981
+!ENTRY org.eclipse.equinox.registry 4 1 2019-08-03 13:53:00.421
 !MESSAGE Executable extension definition for "resolver" not found.
 
-!ENTRY fr.ac6.mcu.ide 1 1 2019-08-03 13:39:58.510
-!MESSAGE Started RMI Server, listening on port 21112
-
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2019-08-03 13:39:59.204
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2019-08-03 13:53:00.948
 !MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Service Temporarily Unavailable. ; version: 2.0.4.v20170307-1435
 !STACK 0
 org.apache.http.client.HttpResponseException: Service Temporarily Unavailable
@@ -33,5 +30,8 @@ org.apache.http.client.HttpResponseException: Service Temporarily Unavailable
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.lang.Thread.run(Thread.java:748)
 
-!ENTRY org.eclipse.cdt.core 1 0 2019-08-03 13:41:24.729
-!MESSAGE Indexed 'STM32L4xx-SensorTile' (82 sources, 188 headers) in 3.81 sec: 24,933 declarations; 124,820 references; 0 unresolved inclusions; 32 syntax errors; 166 unresolved names (0.11%)
+!ENTRY fr.ac6.mcu.ide 1 1 2019-08-03 13:53:00.949
+!MESSAGE Started RMI Server, listening on port 21112
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-08-03 13:56:55.538
+!MESSAGE Indexed 'STM32L4xx-SensorTile' (82 sources, 188 headers) in 4.16 sec: 24,933 declarations; 124,820 references; 0 unresolved inclusions; 32 syntax errors; 166 unresolved names (0.11%)

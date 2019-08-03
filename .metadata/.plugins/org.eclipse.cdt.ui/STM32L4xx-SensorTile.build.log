@@ -1,0 +1,6 @@
+21:41:33 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+make: Nothing to be done for `all'.
+
+21:41:34 Build Finished (took 129ms)
+

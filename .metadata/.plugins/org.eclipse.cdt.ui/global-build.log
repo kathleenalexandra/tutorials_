@@ -1,0 +1,192 @@
+10:37:36 **** Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_cortex.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dfsdm.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dfsdm.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dfsdm.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_gpio.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c_ex.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_i2c_ex.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_pwr_ex.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_rcc_ex.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_sai.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_sai.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_sai.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o" -o "Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_tim_ex.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/system_stm32l4xx.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/CMSIS/system_stm32l4xx.d" -MT"Drivers/CMSIS/system_stm32l4xx.o" -o "Drivers/CMSIS/system_stm32l4xx.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/system_stm32l4xx.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/system_stm32l4xx.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/BSP/SensorTile/SensorTile.d" -MT"Drivers/BSP/SensorTile/SensorTile.o" -o "Drivers/BSP/SensorTile/SensorTile.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile.c: In function 'Sensor_IO_Read':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile.c:489:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   if ( nBytesToRead > 1 ) 
+   ^~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile.c:493:5: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+     return Sensor_IO_I2C_Read( handle, ReadAddr, pBuffer, nBytesToRead );
+     ^~~~~~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_in.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/BSP/SensorTile/SensorTile_audio_in.d" -MT"Drivers/BSP/SensorTile/SensorTile_audio_in.o" -o "Drivers/BSP/SensorTile/SensorTile_audio_in.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_in.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_in.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/BSP/SensorTile/SensorTile_audio_out.d" -MT"Drivers/BSP/SensorTile/SensorTile_audio_out.o" -o "Drivers/BSP/SensorTile/SensorTile_audio_out.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c: In function 'BSP_AUDIO_OUT_SetVolume':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c:329:13: warning: comparison between pointer and integer
+   if(Volume == NULL)
+             ^~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c: In function 'BSP_AUDIO_OUT_SetMute':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c:365:10: warning: comparison between pointer and integer
+   if(Cmd == NULL)
+          ^~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774/PCM1774_CODEC_Driver.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/BSP/Components/PCM1774_CODEC_Driver.d" -MT"Drivers/BSP/Components/PCM1774_CODEC_Driver.o" -o "Drivers/BSP/Components/PCM1774_CODEC_Driver.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774/PCM1774_CODEC_Driver.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774/PCM1774_CODEC_Driver.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/cube_hal_l4.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/cube_hal_l4.d" -MT"AudioLoop/User/cube_hal_l4.o" -o "AudioLoop/User/cube_hal_l4.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/cube_hal_l4.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/cube_hal_l4.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:84:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_hal_msp.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/stm32l4xx_hal_msp.d" -MT"AudioLoop/User/stm32l4xx_hal_msp.o" -o "AudioLoop/User/stm32l4xx_hal_msp.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_hal_msp.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_hal_msp.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_it.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/stm32l4xx_it.d" -MT"AudioLoop/User/stm32l4xx_it.o" -o "AudioLoop/User/stm32l4xx_it.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_it.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_it.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/syscalls.d" -MT"AudioLoop/User/syscalls.o" -o "AudioLoop/User/syscalls.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c: In function '_sbrk':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c:39:23: warning: unused variable 'min_stack_ptr' [-Wunused-variable]
+  char *prev_heap_end,*min_stack_ptr;
+                       ^~~~~~~~~~~~~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/startup_stm32l476xx.s
+Invoking: MCU GCC Assembler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I../../../Inc -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/BSP/Components/Common -I../../../../../../../Drivers/BSP/SensorTile -I../../../../../../../Drivers/BSP/Components/pcm1774 -g -o "AudioLoop/SW4STM32/startup_stm32l476xx.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/startup_stm32l476xx.s"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/startup_stm32l476xx.s
+ 
+Building target: STM32L4xx-SensorTile.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nano.specs -T"../LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32L4xx-SensorTile.elf" @"objects.list"   -lm
+Finished building target: STM32L4xx-SensorTile.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary:
+arm-none-eabi-objcopy -O binary "STM32L4xx-SensorTile.elf" "STM32L4xx-SensorTile.bin"
+ 
+10:39:39 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+make: Nothing to be done for `all'.

@@ -83,7 +83,7 @@ void DATALOG_SD_Init(void)
 uint8_t DATALOG_SD_Log_Enable(void)
 {
   static uint16_t sdcard_file_counter = 0;
-  char header[] = "Timestamp\tAccX [mg]\tAccY [mg]\tAccZ [mg]\tGyroX [mdps]\tGyroY [mdps]\tGyroZ [mdps]\tMagX [mgauss]\tMagY [mgauss]\tMagZ [mgauss]\tP [mB]\tT [°C]\tH [%]\tVOL [mV]\tBAT [%]\r\n";
+  char header[] = "Timestamp\tAccX [mg]\tAccY [mg]\tAccZ [mg]\tGyroX [mdps]\tGyroY [mdps]\tGyroZ [mdps]\tMagX [mgauss]\tMagY [mgauss]\tMagZ [mgauss]\tP [mB]\tT [ï¿½C]\tH [%]\tVOL [mV]\tBAT [%]\r\n";
   uint32_t byteswritten; /* written byte count */
   char file_name[30] = {0};
   
@@ -166,16 +166,23 @@ void RTC_Handler( RTC_HandleTypeDef *RtcHandle )
 * @param  handle the device handle
 * @retval None
 */
-void Accelero_Sensor_Handler( void *handle )
+void Accelero_Sensor_Handler( void *handle, uint32_t msTick, uint32_t *msTickStateChange, uint8_t * state)
 {
   
   uint8_t who_am_i;
   float odr;
   float fullScale;
+  float r, theta, phi;
+  float x, y, z;
   uint8_t id;
   SensorAxes_t acceleration;
   uint8_t status;
-  int32_t d1, d2;
+  int32_t d1, d2, d3, d4, d5, d6;
+  const float RADIAN = 57.2957795;
+
+  uint32_t tau = 5000;
+  float z_thresh = 800.0f;
+
   
   BSP_ACCELERO_Get_Instance( handle, &id );
   
@@ -192,6 +199,62 @@ void Accelero_Sensor_Handler( void *handle )
     
     if(SendOverUSB) /* Write data on the USB */
     {
+    	x = (float)acceleration.AXIS_X;
+    	y = (float)acceleration.AXIS_Y;
+    	z = (float)acceleration.AXIS_Z;
+
+    	r = sqrt(x*x + y*y + z*z);
+    	theta = acos(z/r)*RADIAN;
+    	phi = atan2(y, x)*RADIAN;
+
+    	floatToInt(r, &d1, &d2, 3);
+    	floatToInt(theta, &d3, &d4, 3);
+    	floatToInt(phi, &d5, &d6, 3);
+
+    	sprintf( dataOut, "\n\rr: %d.%03d, theta: %d.%03d, phi: %d.%03d",
+    			(int)d1, (int)d2,
+				(int)d3, (int)d4,
+				(int)d5, (int)d6
+    			);
+    	CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+    	sprintf( dataOut,"\n\rA_x: %d, A_y: %d, A_z: %d, |A|: %d.%03d",
+    			acceleration.AXIS_X,
+				acceleration.AXIS_Y,
+				acceleration.AXIS_Z,
+				(int)d1, (int)d2
+				);
+    	CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+
+    	sprintf(dataOut, "\n\rA_z: %d, *state: %d, msTick - *msTickStateChange: %d, tau: %d",
+    			(int) acceleration.AXIS_Z,
+				(int) *state,
+				(int) (msTick - *msTickStateChange),
+				(int) tau
+				);
+    	CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+
+
+    	if ( (*state == 0) && (z < -z_thresh) && ( (msTick - *msTickStateChange) > tau) ) {
+    		*state = 1;
+    		*msTickStateChange = msTick;
+    	}
+
+    	else if ((*state == 1) && (z > z_thresh) && ( (msTick - *msTickStateChange) > tau) ) {
+    		*state = 2;
+    		*msTickStateChange = msTick;
+    	}
+
+    	else if ( (*state == 2) && ((msTick - *msTickStateChange) < tau ) ) {
+    		sprintf(dataOut, "\n\n\r\t\tFlipping Gesture Detected! \n");
+    		CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+    	}
+
+    	else if ((msTick - *msTickStateChange) > tau) {
+    		*state = 0;
+    		*msTickStateChange = 0;
+    	}
+
+
       sprintf( dataOut, "\n\rACC_X: %d, ACC_Y: %d, ACC_Z: %d", (int)acceleration.AXIS_X, (int)acceleration.AXIS_Y, (int)acceleration.AXIS_Z );
       CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));   
       

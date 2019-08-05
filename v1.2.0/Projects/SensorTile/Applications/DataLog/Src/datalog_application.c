@@ -148,14 +148,14 @@ void RTC_Handler( RTC_HandleTypeDef *RtcHandle )
   
   if(SendOverUSB) /* Write data on the USB */
   {
-    sprintf( dataOut, "\nTimeStamp: %02d:%02d:%02d.%02d", stimestructure.Hours, stimestructure.Minutes, stimestructure.Seconds, subSec );
-    CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
+   /* sprintf( dataOut, "\nTimeStamp: %02d:%02d:%02d.%02d", stimestructure.Hours, stimestructure.Minutes, stimestructure.Seconds, subSec );
+    CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut )); */
   }
   else if(SD_Log_Enabled) /* Write data to the file on the SDCard */
   {
     uint8_t size;
-    size = sprintf( dataOut, "%02d:%02d:%02d.%02d\t", stimestructure.Hours, stimestructure.Minutes, stimestructure.Seconds, subSec);    
-    res = f_write(&MyFile, dataOut, size, (void *)&byteswritten);
+   // size = sprintf( dataOut, "%02d:%02d:%02d.%02d\t", stimestructure.Hours, stimestructure.Minutes, stimestructure.Seconds, subSec);
+    //res = f_write(&MyFile, dataOut, size, (void *)&byteswritten);
   }
 }
 
@@ -211,27 +211,39 @@ void Accelero_Sensor_Handler( void *handle, uint32_t msTick, uint32_t *msTickSta
     	floatToInt(theta, &d3, &d4, 3);
     	floatToInt(phi, &d5, &d6, 3);
 
-    	sprintf( dataOut, "\n\rr: %d.%03d, theta: %d.%03d, phi: %d.%03d",
+    	/*sprintf( dataOut, "\n\rr: %d.%03d, theta: %d.%03d, phi: %d.%03d",
     			(int)d1, (int)d2,
 				(int)d3, (int)d4,
 				(int)d5, (int)d6
-    			);
-    	CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+    			); */
+
+
+    	/* CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
     	sprintf( dataOut,"\n\rA_x: %d, A_y: %d, A_z: %d, |A|: %d.%03d",
     			acceleration.AXIS_X,
 				acceleration.AXIS_Y,
 				acceleration.AXIS_Z,
 				(int)d1, (int)d2
-				);
-    	CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+				); */
 
-    	sprintf(dataOut, "\n\rA_z: %d, *state: %d, msTick - *msTickStateChange: %d, tau: %d",
+
+
+   	 CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+    	sprintf( dataOut,"\n\r  %d,%d",
+    			acceleration.AXIS_X,
+				acceleration.AXIS_Y
+				);
+
+
+
+
+    	/*sprintf(dataOut, "\n\rA_z: %d, *state: %d, msTick - *msTickStateChange: %d, tau: %d",
     			(int) acceleration.AXIS_Z,
 				(int) *state,
 				(int) (msTick - *msTickStateChange),
 				(int) tau
 				);
-    	CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+    	CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut)); */
 
 
     	if ( (*state == 0) && (z < -z_thresh) && ( (msTick - *msTickStateChange) > tau) ) {
@@ -245,8 +257,9 @@ void Accelero_Sensor_Handler( void *handle, uint32_t msTick, uint32_t *msTickSta
     	}
 
     	else if ( (*state == 2) && ((msTick - *msTickStateChange) < tau ) ) {
-    		sprintf(dataOut, "\n\n\r\t\tFlipping Gesture Detected! \n");
-    		CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
+    		state = 0;
+    		/*sprintf(dataOut, "\n\n\r\t\tFlipping Gesture Detected! \n");
+    		CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut)); */
     	}
 
     	else if ((msTick - *msTickStateChange) > tau) {
@@ -255,8 +268,8 @@ void Accelero_Sensor_Handler( void *handle, uint32_t msTick, uint32_t *msTickSta
     	}
 
 
-      sprintf( dataOut, "\n\rACC_X: %d, ACC_Y: %d, ACC_Z: %d", (int)acceleration.AXIS_X, (int)acceleration.AXIS_Y, (int)acceleration.AXIS_Z );
-      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));   
+      /*sprintf( dataOut, "\n\rACC_X: %d, ACC_Y: %d, ACC_Z: %d", (int)acceleration.AXIS_X, (int)acceleration.AXIS_Y, (int)acceleration.AXIS_Z );
+      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));  */
       
       if ( verbose == 1 )
       {
@@ -338,8 +351,8 @@ void Gyro_Sensor_Handler( void *handle )
     
     if(SendOverUSB) /* Write data on the USB */
     {
-      sprintf( dataOut, "\n\rGYR_X: %d, GYR_Y: %d, GYR_Z: %d", (int)angular_velocity.AXIS_X, (int)angular_velocity.AXIS_Y, (int)angular_velocity.AXIS_Z );
-      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
+      /*sprintf( dataOut, "\n\rGYR_X: %d, GYR_Y: %d, GYR_Z: %d", (int)angular_velocity.AXIS_X, (int)angular_velocity.AXIS_Y, (int)angular_velocity.AXIS_Z );
+      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut )); */
       
       if ( verbose == 1 )
       {
@@ -420,8 +433,8 @@ void Magneto_Sensor_Handler( void *handle )
     
     if(SendOverUSB) /* Write data on the USB */
     {
-      sprintf( dataOut, "\n\rMAG_X: %d, MAG_Y: %d, MAG_Z: %d", (int)magnetic_field.AXIS_X, (int)magnetic_field.AXIS_Y, (int)magnetic_field.AXIS_Z );
-      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
+     /* sprintf( dataOut, "\n\rMAG_X: %d, MAG_Y: %d, MAG_Z: %d", (int)magnetic_field.AXIS_X, (int)magnetic_field.AXIS_Y, (int)magnetic_field.AXIS_Z );
+      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut )); */
       
       if ( verbose == 1 )
       {
@@ -500,8 +513,8 @@ void Humidity_Sensor_Handler( void *handle )
     
     if(SendOverUSB) /* Write data on the USB */
     {
-      sprintf( dataOut, "\n\rHUM: %d.%02d", (int)d1, (int)d2 );
-      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
+      /*sprintf( dataOut, "\n\rHUM: %d.%02d", (int)d1, (int)d2 );
+      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut )); */
       
       if ( verbose == 1 )
       {
@@ -532,7 +545,7 @@ void Humidity_Sensor_Handler( void *handle )
     else if(SD_Log_Enabled) /* Write data to the file on the SDCard */
     {
       uint8_t size;
-      size = sprintf( dataOut, "%5.2f\t", humidity);
+    //  size = sprintf( dataOut, "%5.2f\t", humidity);
       res = f_write(&MyFile, dataOut, size, (void *)&byteswritten);
     }
   }
@@ -569,8 +582,8 @@ void Temperature_Sensor_Handler( void *handle )
     
     if(SendOverUSB) /* Write data on the USB */
     {
-      sprintf( dataOut, "\n\rTEMP: %d.%02d", (int)d1, (int)d2 );
-      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
+     /* sprintf( dataOut, "\n\rTEMP: %d.%02d", (int)d1, (int)d2 );
+      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut )); */
       
       if ( verbose == 1 )
       {
@@ -601,7 +614,7 @@ void Temperature_Sensor_Handler( void *handle )
     else if(SD_Log_Enabled) /* Write data to the file on the SDCard */
     {
       uint8_t size;
-      size = sprintf( dataOut, "%3.1f\t", temperature);
+     // size = sprintf( dataOut, "%3.1f\t", temperature);
       res = f_write(&MyFile, dataOut, size, (void *)&byteswritten);
     }
   }
@@ -638,8 +651,8 @@ void Pressure_Sensor_Handler( void *handle )
     
     if(SendOverUSB)
     {
-      sprintf(dataOut, "\n\rPRESS: %d.%02d", (int)d1, (int)d2);
-      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
+     /* sprintf(dataOut, "\n\rPRESS: %d.%02d", (int)d1, (int)d2);
+      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut )); */
       
       if ( verbose == 1 )
       {
@@ -668,7 +681,7 @@ void Pressure_Sensor_Handler( void *handle )
     else if(SD_Log_Enabled) /* Write data to the file on the SDCard */
     {
       uint8_t size;
-      size = sprintf( dataOut, "%5.2f\t", pressure);
+     //  size = sprintf( dataOut, "%5.2f\t", pressure);
       res = f_write(&MyFile, dataOut, size, (void *)&byteswritten);
     }
   }

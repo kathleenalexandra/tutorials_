@@ -152,7 +152,8 @@ int main( void )
   {
     DATALOG_SD_Init();
   }
-  HAL_Delay(200);
+// was 200
+  HAL_Delay(1000);
   
   /* Configure and disable all the Chip Select pins */
   Sensor_IO_SPI_CS_Init_All();

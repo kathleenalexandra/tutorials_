@@ -227,14 +227,12 @@ void Accelero_Sensor_Handler( void *handle, uint32_t msTick, uint32_t *msTickSta
 				); */
 
 
-
-   	 CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
-    	sprintf( dataOut,"\n\r  %d,%d",
+    	sprintf( dataOut,"\n\r\t%d,\t%d,\t%d\t",
     			acceleration.AXIS_X,
-				acceleration.AXIS_Y
+				acceleration.AXIS_Y,
+				acceleration.AXIS_Z
 				);
-
-
+    	 CDC_Fill_Buffer((uint8_t *)dataOut, strlen(dataOut));
 
 
     	/*sprintf(dataOut, "\n\rA_z: %d, *state: %d, msTick - *msTickStateChange: %d, tau: %d",
@@ -268,8 +266,8 @@ void Accelero_Sensor_Handler( void *handle, uint32_t msTick, uint32_t *msTickSta
     	}
 
 
-      /*sprintf( dataOut, "\n\rACC_X: %d, ACC_Y: %d, ACC_Z: %d", (int)acceleration.AXIS_X, (int)acceleration.AXIS_Y, (int)acceleration.AXIS_Z );
-      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));  */
+     /* sprintf( dataOut, "\n\rACC_X: %d, ACC_Y: %d, ACC_Z: %d", (int)acceleration.AXIS_X, (int)acceleration.AXIS_Y, (int)acceleration.AXIS_Z );
+      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut )); */
       
       if ( verbose == 1 )
       {
@@ -351,9 +349,12 @@ void Gyro_Sensor_Handler( void *handle )
     
     if(SendOverUSB) /* Write data on the USB */
     {
-      /*sprintf( dataOut, "\n\rGYR_X: %d, GYR_Y: %d, GYR_Z: %d", (int)angular_velocity.AXIS_X, (int)angular_velocity.AXIS_Y, (int)angular_velocity.AXIS_Z );
-      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut )); */
+
+   /* LINE OF DATA! GYRO */
+      sprintf( dataOut, "\t,\t%d,\t%d,\t%d", (int)angular_velocity.AXIS_X, (int)angular_velocity.AXIS_Y, (int)angular_velocity.AXIS_Z );
+      CDC_Fill_Buffer(( uint8_t * )dataOut, strlen( dataOut ));
       
+
       if ( verbose == 1 )
       {
         if ( BSP_GYRO_Get_WhoAmI( handle, &who_am_i ) == COMPONENT_ERROR )

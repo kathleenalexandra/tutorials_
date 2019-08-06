@@ -1,6 +1,68 @@
-22:32:14 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+20:53:27 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
 make all 
-make: Nothing to be done for `all'.
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/hts221" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lps22hb" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/stc3115" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Middlewares/Third_Party/FatFs/src" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Middlewares/Third_Party/FatFs/src/drivers" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"  -O0 -g1 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"DataLog/User/datalog_application.d" -MT"DataLog/User/datalog_application.o" -o "DataLog/User/datalog_application.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c: In function 'RTC_Handler':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:156:13: warning: unused variable 'size' [-Wunused-variable]
+     uint8_t size;
+             ^~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:141:11: warning: variable 'subSec' set but not used [-Wunused-but-set-variable]
+   uint8_t subSec = 0;
+           ^~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c: In function 'Accelero_Sensor_Handler':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:230:31: warning: format '%d' expects argument of type 'int', but argument 3 has type 'int32_t {aka long int}' [-Wformat=]
+      sprintf( dataOut,"\n\r\t%d,\t%d,\t%d\t",
+                               ^
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:230:36: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t {aka long int}' [-Wformat=]
+      sprintf( dataOut,"\n\r\t%d,\t%d,\t%d\t",
+                                    ^
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:230:41: warning: format '%d' expects argument of type 'int', but argument 5 has type 'int32_t {aka long int}' [-Wformat=]
+      sprintf( dataOut,"\n\r\t%d,\t%d,\t%d\t",
+                                         ^
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c: In function 'Gas_Gauge_Handler':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:720:34: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+       sprintf( dataOut, "\n\rV: %dmV Chrg: %d%%", (uint32_t)voltage, (uint32_t)soc);
+                                  ^
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:720:45: warning: format '%d' expects argument of type 'int', but argument 4 has type 'long unsigned int' [-Wformat=]
+       sprintf( dataOut, "\n\rV: %dmV Chrg: %d%%", (uint32_t)voltage, (uint32_t)soc);
+                                             ^
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:726:34: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+       size = sprintf( dataOut, "%d\t%d\t", (uint32_t)voltage, (uint32_t)soc);
+                                  ^
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:726:38: warning: format '%d' expects argument of type 'int', but argument 4 has type 'long unsigned int' [-Wformat=]
+       size = sprintf( dataOut, "%d\t%d\t", (uint32_t)voltage, (uint32_t)soc);
+                                      ^
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c: In function 'Humidity_Sensor_Handler':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:550:13: warning: 'size' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       res = f_write(&MyFile, dataOut, size, (void *)&byteswritten);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c: In function 'Temperature_Sensor_Handler':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:619:13: warning: 'size' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       res = f_write(&MyFile, dataOut, size, (void *)&byteswritten);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c: In function 'Pressure_Sensor_Handler':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:686:13: warning: 'size' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       res = f_write(&MyFile, dataOut, size, (void *)&byteswritten);
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/hts221" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lps22hb" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/stc3115" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Middlewares/Third_Party/FatFs/src" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Middlewares/Third_Party/FatFs/src/drivers" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"  -O0 -g1 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"DataLog/User/main.d" -MT"DataLog/User/main.o" -o "DataLog/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/main.c"
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/DataLog/Src/main.c
+ 
+Building target: STM32L4xx-SensorTile.elf
+Invoking: MCU G++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nano.specs -T"../LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -o "STM32L4xx-SensorTile.elf" @"objects.list"   -lm
+Finished building target: STM32L4xx-SensorTile.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary:
+arm-none-eabi-objcopy -O binary "STM32L4xx-SensorTile.elf" "STM32L4xx-SensorTile.bin"
+ 
 
-22:32:15 Build Finished (took 119ms)
+20:53:27 Build Finished (took 498ms)
 

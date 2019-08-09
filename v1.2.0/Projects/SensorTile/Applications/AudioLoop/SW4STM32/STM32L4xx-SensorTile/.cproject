@@ -36,6 +36,8 @@
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/BSP/Components/Common"/>
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/BSP/SensorTile"/>
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/BSP/Components/pcm1774"/>
+									<listOptionValue builtIn="false" value="/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm"/>
+									<listOptionValue builtIn="false" value="/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.675701715" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="USE_HAL_DRIVER"/>
@@ -74,6 +76,8 @@
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/BSP/Components/Common"/>
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/BSP/SensorTile"/>
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/BSP/Components/pcm1774"/>
+									<listOptionValue builtIn="false" value="/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm"/>
+									<listOptionValue builtIn="false" value="/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1862515303" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.assembler.input.1937990078" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler.input"/>

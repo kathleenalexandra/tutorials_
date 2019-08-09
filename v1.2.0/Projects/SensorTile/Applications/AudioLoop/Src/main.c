@@ -60,7 +60,7 @@ extern volatile float mic1_results[];
 static void *PCM1774_X_0_handle = NULL;
 
 
-static void LSM6DSM_X_0_handle = NULL;
+static void *LSM6DSM_X_0_handle = NULL;
 SensorAxes_t acceleration;
 
 /* Private function prototypes -----------------------------------------------*/

@@ -105,7 +105,7 @@ int main( void )
   {
     /* Go to Sleep, everything is done in the interrupt service routines */
    //  __WFI();
-	  BSP_ACCELERO_Get_Axis(LSM6DSM_X_0_handle, &acceleration);
+	  BSP_ACCELERO_Get_Axes(LSM6DSM_X_0_handle, &acceleration);
   }
 }
 

@@ -49,6 +49,8 @@ extern "C" {
 #include "SensorTile_audio_in.h"
 #include "SensorTile_audio_out.h"
 #include "SensorTile_accelero.h"
+#include "stm32l4xx_hal_spi.h"
+#include "stm32l4xx_hal.h"
 
 
 /* Exported types ------------------------------------------------------------*/

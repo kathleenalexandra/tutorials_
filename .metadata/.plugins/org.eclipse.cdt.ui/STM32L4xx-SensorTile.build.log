@@ -1,4 +1,4 @@
-17:45:05 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+18:09:22 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
 make all 
 Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
 Invoking: MCU GCC Compiler
@@ -13,49 +13,17 @@ In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/Senso
 /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
    uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
            ^~~~~~~~~~~~~~~~~~
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:108:4: warning: implicit declaration of function 'BSP_ACCELERO_Get_Axis' [-Wimplicit-function-declaration]
-    BSP_ACCELERO_Get_Axis(LSM6DSM_X_0_handle, &acceleration);
-    ^~~~~~~~~~~~~~~~~~~~~
 Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
- 
-Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_hal_msp.c
-Invoking: MCU GCC Compiler
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/stm32l4xx_hal_msp.d" -MT"AudioLoop/User/stm32l4xx_hal_msp.o" -o "AudioLoop/User/stm32l4xx_hal_msp.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_hal_msp.c"
-Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_hal_msp.c
- 
-Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_it.c
-Invoking: MCU GCC Compiler
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/stm32l4xx_it.d" -MT"AudioLoop/User/stm32l4xx_it.o" -o "AudioLoop/User/stm32l4xx_it.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_it.c"
-Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/stm32l4xx_it.c
- 
-Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c
-Invoking: MCU GCC Compiler
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/syscalls.d" -MT"AudioLoop/User/syscalls.o" -o "AudioLoop/User/syscalls.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c"
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c: In function '_sbrk':
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c:39:23: warning: unused variable 'min_stack_ptr' [-Wunused-variable]
-  char *prev_heap_end,*min_stack_ptr;
-                       ^~~~~~~~~~~~~
-Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/syscalls.c
- 
-Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/startup_stm32l476xx.s
-Invoking: MCU GCC Assembler
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
-arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I../../../Inc -I../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/BSP/Components/Common -I../../../../../../../Drivers/BSP/SensorTile -I../../../../../../../Drivers/BSP/Components/pcm1774 -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr -g -o "AudioLoop/SW4STM32/startup_stm32l476xx.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/startup_stm32l476xx.s"
-Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/startup_stm32l476xx.s
  
 Building target: STM32L4xx-SensorTile.elf
 Invoking: MCU GCC Linker
 arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nano.specs -T"../LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32L4xx-SensorTile.elf" @"objects.list"   -lm
-AudioLoop/User/main.o: In function `main':
-main.c:(.text.startup.main+0x50): undefined reference to `BSP_ACCELERO_Get_Axis'
-Drivers/BSP/SensorTile/SensorTile.o: In function `Sensor_IO_SPI_Init':
-SensorTile.c:(.text.Sensor_IO_SPI_Init+0xc): undefined reference to `HAL_SPI_GetState'
-SensorTile.c:(.text.Sensor_IO_SPI_Init+0xba): undefined reference to `HAL_SPI_Init'
-collect2: error: ld returned 1 exit status
-make: *** [STM32L4xx-SensorTile.elf] Error 1
+Finished building target: STM32L4xx-SensorTile.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary:
+arm-none-eabi-objcopy -O binary "STM32L4xx-SensorTile.elf" "STM32L4xx-SensorTile.bin"
+ 
 
-17:45:05 Build Finished (took 596ms)
+18:09:23 Build Finished (took 277ms)
 

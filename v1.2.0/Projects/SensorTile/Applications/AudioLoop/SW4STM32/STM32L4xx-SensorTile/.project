@@ -191,6 +191,26 @@
 			<locationURI>PARENT-6-PROJECT_LOC/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c</locationURI>
 		</link>
 		<link>
+			<name>Drivers/BSP/Components/LSM303AGR_ACC_driver.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/Drivers/BSP/Components/lsm303agr/LSM303AGR_ACC_driver.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/Components/LSM303AGR_ACC_driver_HL.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/Drivers/BSP/Components/lsm303agr/LSM303AGR_ACC_driver_HL.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/Components/LSM6DSM_ACC_GYRO_driver.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/Drivers/BSP/Components/lsm6dsm/LSM6DSM_ACC_GYRO_driver.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/Components/LSM6DSM_ACC_GYRO_driver_HL.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/Drivers/BSP/Components/lsm6dsm/LSM6DSM_ACC_GYRO_driver_HL.c</locationURI>
+		</link>
+		<link>
 			<name>Drivers/BSP/Components/PCM1774_CODEC_Driver.c</name>
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/Drivers/BSP/Components/pcm1774/PCM1774_CODEC_Driver.c</locationURI>

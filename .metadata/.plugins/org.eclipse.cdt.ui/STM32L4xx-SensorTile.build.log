@@ -1,29 +1,6 @@
-18:09:22 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+19:03:50 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
 make all 
-Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
-Invoking: MCU GCC Compiler
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:89:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
-   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
-                                                      ^~~~
-In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
-                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
-/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
-   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
-           ^~~~~~~~~~~~~~~~~~
-Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
- 
-Building target: STM32L4xx-SensorTile.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nano.specs -T"../LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32L4xx-SensorTile.elf" @"objects.list"   -lm
-Finished building target: STM32L4xx-SensorTile.elf
- 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
-Generating binary:
-arm-none-eabi-objcopy -O binary "STM32L4xx-SensorTile.elf" "STM32L4xx-SensorTile.bin"
- 
+make: Nothing to be done for `all'.
 
-18:09:23 Build Finished (took 277ms)
+19:03:50 Build Finished (took 75ms)
 

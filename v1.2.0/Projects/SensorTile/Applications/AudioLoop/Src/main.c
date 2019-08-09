@@ -49,6 +49,12 @@
 #define AUDIO_IN_BUF_LEN   (AUDIO_CHANNELS*AUDIO_SAMPLING_FREQUENCY/1000)
 #define AUDIO_OUT_BUF_LEN  (AUDIO_IN_BUF_LEN*8)
 
+#define F0 3000
+#define HIGH_PASS_FILTER 0
+#define LOW_PASS_FILTER 1
+#define NO_FILTER 2
+#define GAIN 1024
+
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 
@@ -62,6 +68,12 @@ static void *PCM1774_X_0_handle = NULL;
 
 static void *LSM6DSM_X_0_handle = NULL;
 SensorAxes_t acceleration;
+
+int16_t filter_type = NO_FILTER;
+
+
+float roll;
+float aX, aY, aZ;
 
 /* Private function prototypes -----------------------------------------------*/
 
@@ -106,6 +118,19 @@ int main( void )
     /* Go to Sleep, everything is done in the interrupt service routines */
    //  __WFI();
 	  BSP_ACCELERO_Get_Axes(LSM6DSM_X_0_handle, &acceleration);
+	  aX = acceleration.AXIS_X;
+	  aY = acceleration.AXIS_Y;
+	  aZ = acceleration.AXIS_Z;
+	  roll = 57.2957795f *atan (aY/sqrt(aX*aX + aZ*aZ));
+	  if (roll > 30) {
+		  filter_type = HIGH_PASS_FILTER;
+	  }
+	  else if (roll < -30) {
+		  filter_type = LOW_PASS_FILTER;
+	  }
+	  else {
+		  filter_type = NO_FILTER;
+	  }
   }
 }
 
@@ -125,12 +150,53 @@ void AudioProcess(void)
   static uint32_t AudioOutActive = 0;
   uint32_t indexIn;
   
+ // int16_t filter_type = NO_FILTER;
+ int16_t IWon;
+ int16_t c[3];
+ int16_t prev_in, cur_in;
+ int32_t new_out;
+
+ IWon = (int) AUDIO_SAMPLING_FREQUENCY / (3.14159 * F0);
+ if (filter_type == LOW_PASS_FILTER) {
+	 c[0] = GAIN / (1.0f + IWon);
+	 c[1] = c[0];
+	 c[2] = c[0] * (1.0f - IWon);
+
+ }
+
+ else if (filter_type == HIGH_PASS_FILTER) {
+	 c[0] = GAIN - (GAIN / (1.0f + IWon));
+	 c[1] = -c[0];
+	 c[2]= (1.0f / (1.0f + IWon)) * (GAIN - IWon * GAIN);
+ }
+ else if (filter_type == NO_FILTER) {
+	 c[0] = GAIN;
+	 c[1] = 0;
+	 c[2] = 0;
+
+ }
+
+
   for(indexIn=0;indexIn<AUDIO_IN_BUF_LEN;indexIn++)
   {
-    audio_out_buffer[IndexOut++] = PCM_Buffer[indexIn];
-    audio_out_buffer[IndexOut++] = PCM_Buffer[indexIn];
+	  if (indexIn == 0) {
+		  audio_out_buffer[IndexOut++] = PCM_Buffer[indexIn];
+		  audio_out_buffer[IndexOut++] = PCM_Buffer[indexIn];
+	  } else {
+		  cur_in = PCM_Buffer[indexIn];
+		  new_out = cur_in * prev_in * c[1] - audio_out_buffer[IndexOut -2] * c[2];
+		  audio_out_buffer[IndexOut++] = new_out / GAIN;
+		  audio_out_buffer[IndexOut++] = new_out / GAIN;
+		  prev_in = cur_in;
+	  }
+
+
+    /*audio_out_buffer[IndexOut++] = PCM_Buffer[indexIn];
+    audio_out_buffer[IndexOut++] = PCM_Buffer[indexIn]; */
   }
   
+
+
   if(!AudioOutActive && IndexOut==AUDIO_OUT_BUF_LEN/2)
   {
     BSP_AUDIO_OUT_Play(PCM1774_X_0_handle,(uint16_t*)audio_out_buffer, AUDIO_OUT_BUF_LEN);

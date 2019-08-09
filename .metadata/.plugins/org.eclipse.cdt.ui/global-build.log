@@ -577,3 +577,234 @@ Finished building target: STM32L4xx-SensorTile.elf
 Generating binary:
 arm-none-eabi-objcopy -O binary "STM32L4xx-SensorTile.elf" "STM32L4xx-SensorTile.bin"
  
+18:42:47 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/BSP/SensorTile/SensorTile_audio_out.d" -MT"Drivers/BSP/SensorTile/SensorTile_audio_out.o" -o "Drivers/BSP/SensorTile/SensorTile_audio_out.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c: In function 'BSP_AUDIO_OUT_SetVolume':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c:330:13: warning: comparison between pointer and integer
+   if(Volume == NULL)
+             ^~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c: In function 'BSP_AUDIO_OUT_SetMute':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c:366:10: warning: comparison between pointer and integer
+   if(Cmd == NULL)
+          ^~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.c
+ 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:95:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+ 
+Building target: STM32L4xx-SensorTile.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nano.specs -T"../LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32L4xx-SensorTile.elf" @"objects.list"   -lm
+Finished building target: STM32L4xx-SensorTile.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary:
+arm-none-eabi-objcopy -O binary "STM32L4xx-SensorTile.elf" "STM32L4xx-SensorTile.bin"
+ 
+18:42:57 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+make: Nothing to be done for `all'.
+18:46:08 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:97:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'AudioProcess':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:170:71: warning: 'c[2]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     new_out = cur_in * prev_in * c[1] - audio_out_buffer[IndexOut -2] * c[2];
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:170:35: warning: 'c[1]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     new_out = cur_in * prev_in * c[1] - audio_out_buffer[IndexOut -2] * c[2];
+                                  ~^~~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+ 
+Building target: STM32L4xx-SensorTile.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nano.specs -T"../LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32L4xx-SensorTile.elf" @"objects.list"   -lm
+Finished building target: STM32L4xx-SensorTile.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary:
+arm-none-eabi-objcopy -O binary "STM32L4xx-SensorTile.elf" "STM32L4xx-SensorTile.bin"
+ 
+18:54:05 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:73:9: error: redefinition of 'filter_type'
+ int16_t filter_type = LOW_PASS_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:72:9: note: previous definition of 'filter_type' was here
+ int16_t filter_type = NO_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:101:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+make: *** [AudioLoop/User/main.o] Error 1
+18:54:10 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:73:9: error: redefinition of 'filter_type'
+ int16_t filter_type = LOW_PASS_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:72:9: note: previous definition of 'filter_type' was here
+ int16_t filter_type = NO_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:101:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+make: *** [AudioLoop/User/main.o] Error 1
+18:54:20 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:73:9: error: redefinition of 'filter_type'
+ int16_t filter_type = LOW_PASS_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:72:9: note: previous definition of 'filter_type' was here
+ int16_t filter_type = NO_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:101:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+make: *** [AudioLoop/User/main.o] Error 1
+18:54:44 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:73:9: error: redefinition of 'filter_type'
+ int16_t filter_type = LOW_PASS_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:72:9: note: previous definition of 'filter_type' was here
+ int16_t filter_type = NO_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:101:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+make: *** [AudioLoop/User/main.o] Error 1
+18:58:42 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:73:9: error: redefinition of 'filter_type'
+ int16_t filter_type = LOW_PASS_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:72:9: note: previous definition of 'filter_type' was here
+ int16_t filter_type = NO_FILTER;
+         ^~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:101:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+make: *** [AudioLoop/User/main.o] Error 1
+19:00:52 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774" -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm6dsm -I/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/lsm303agr  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"AudioLoop/User/main.d" -MT"AudioLoop/User/main.o" -o "AudioLoop/User/main.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c"
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'main':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:101:54: warning: passing argument 3 of 'BSP_AUDIO_OUT_Init' makes integer from pointer without a cast [-Wint-conversion]
+   BSP_AUDIO_OUT_Init(PCM1774_0, &PCM1774_X_0_handle, NULL, 20, AUDIO_SAMPLING_FREQUENCY); 
+                                                      ^~~~
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc/main.h:50:0,
+                 from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:43:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_audio_out.h:187:11: note: expected 'uint16_t {aka short unsigned int}' but argument is of type 'void *'
+   uint8_t BSP_AUDIO_OUT_Init(CODEX_ID_t id, void **handle, uint16_t OutputDevice, uint8_t Volume, uint32_t AudioFreq);
+           ^~~~~~~~~~~~~~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c: In function 'AudioProcess':
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:187:71: warning: 'c[2]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     new_out = cur_in * prev_in * c[1] - audio_out_buffer[IndexOut -2] * c[2];
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c:187:35: warning: 'c[1]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     new_out = cur_in * prev_in * c[1] - audio_out_buffer[IndexOut -2] * c[2];
+                                  ~^~~
+Finished building: /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Src/main.c
+ 
+Building target: STM32L4xx-SensorTile.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=nano.specs -T"../LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32L4xx-SensorTile.elf" @"objects.list"   -lm
+Finished building target: STM32L4xx-SensorTile.elf
+ 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make --no-print-directory post-build
+Generating binary:
+arm-none-eabi-objcopy -O binary "STM32L4xx-SensorTile.elf" "STM32L4xx-SensorTile.bin"
+ 
+19:01:03 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+make: Nothing to be done for `all'.
+19:01:59 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+make: Nothing to be done for `all'.
+19:03:37 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+make: Nothing to be done for `all'.
+19:03:50 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+make: Nothing to be done for `all'.

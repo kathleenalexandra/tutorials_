@@ -100,8 +100,8 @@ static void initializeAllSensors( void );
   */
 int main( void )
 {
-  uint32_t msTick, msTickPrev = 0, msTickStateChange = 0;
-  uint8_t doubleTap = 0, state = 0;
+  uint32_t msTick, msTickPrev = 0;
+  uint8_t doubleTap = 0;
   
   /* STM32L4xx HAL library initialization:
   - Configure the Flash prefetch, instruction and Data caches
@@ -152,8 +152,7 @@ int main( void )
   {
     DATALOG_SD_Init();
   }
-// was 200
-  HAL_Delay(1000);
+  HAL_Delay(200);
   
   /* Configure and disable all the Chip Select pins */
   Sensor_IO_SPI_CS_Init_All();
@@ -182,7 +181,7 @@ int main( void )
 #endif      
       RTC_Handler( &RtcHandle );
       
-      Accelero_Sensor_Handler( LSM6DSM_X_0_handle, msTick, &msTickStateChange, &state);
+      Accelero_Sensor_Handler( LSM6DSM_X_0_handle );
       
       Gyro_Sensor_Handler( LSM6DSM_G_0_handle );
       

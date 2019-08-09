@@ -58,6 +58,11 @@ volatile int16_t audio_out_buffer[AUDIO_OUT_BUF_LEN];
 extern SAI_HandleTypeDef haudio_out_sai;
 extern volatile float mic1_results[];
 static void *PCM1774_X_0_handle = NULL;
+
+
+static void LSM6DSM_X_0_handle = NULL;
+SensorAxes_t acceleration;
+
 /* Private function prototypes -----------------------------------------------*/
 
 /* Private functions ---------------------------------------------------------*/
@@ -90,10 +95,17 @@ int main( void )
   /* Start Microphone acquisition */
   BSP_AUDIO_IN_Record(PCM_Buffer,0);
   
+  if(BSP_ACCELERO_Init(LSM6DSM_X_0, &LSM6DSM_X_0_handle) != COMPONENT_OK  ) {
+	  while(1);
+  }
+  BSP_ACCELERO_Sensor_Enable( LSM6DSM_X_0_handle);
+
+
   while (1)
   {
     /* Go to Sleep, everything is done in the interrupt service routines */
-    __WFI();
+   //  __WFI();
+	  BSP_ACCELERO_Get_Axis(LSM6DSM_X_0_handle, &acceleration);
   }
 }
 

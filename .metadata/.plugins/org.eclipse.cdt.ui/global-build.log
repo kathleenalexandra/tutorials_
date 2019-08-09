@@ -168,3 +168,15 @@ In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/Senso
     BSP_ACCELERO_Get_Axis(LSM6DSM_X_0_handle, &acceleration);
     ^~~~~~~~~~~~~~~~~~~~~
 make: *** [AudioLoop/User/main.o] Error 1
+17:24:47 **** Incremental Build of configuration Release for project STM32L4xx-SensorTile ****
+make all 
+Building file: /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_accelero.c
+Invoking: MCU GCC Compiler
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/SW4STM32/STM32L4xx-SensorTile/Release
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DUSE_HAL_DRIVER -DOSX_BMS_SENSORTILE -DSTM32L476xx -DUSE_STM32L4XX_NUCLEO -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Projects/SensorTile/Applications/AudioLoop/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/STM32L4xx_HAL_Driver/Inc" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/CMSIS/Include" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/Common" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile" -I"/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/Components/pcm1774"  -Os -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Drivers/BSP/SensorTile/SensorTile_accelero.d" -MT"Drivers/BSP/SensorTile/SensorTile_accelero.o" -o "Drivers/BSP/SensorTile/SensorTile_accelero.o" "/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_accelero.c"
+In file included from /Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_accelero.c:42:0:
+/Users/alexandra/Desktop/myworkspace/v1.2.0/Drivers/BSP/SensorTile/SensorTile_accelero.h:50:40: fatal error: LSM6DSM_ACC_GYRO_driver_HL.h: No such file or directory
+ #include "LSM6DSM_ACC_GYRO_driver_HL.h"
+                                        ^
+compilation terminated.
+make: *** [Drivers/BSP/SensorTile/SensorTile_accelero.o] Error 1

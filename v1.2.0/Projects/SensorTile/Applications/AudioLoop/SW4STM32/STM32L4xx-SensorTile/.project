@@ -201,6 +201,11 @@
 			<locationURI>PARENT-6-PROJECT_LOC/Drivers/BSP/SensorTile/SensorTile.c</locationURI>
 		</link>
 		<link>
+			<name>Drivers/BSP/SensorTile/SensorTile_accelero.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/Drivers/BSP/SensorTile/SensorTile_accelero.c</locationURI>
+		</link>
+		<link>
 			<name>Drivers/BSP/SensorTile/SensorTile_audio_in.c</name>
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/Drivers/BSP/SensorTile/SensorTile_audio_in.c</locationURI>
